@@ -1,0 +1,1 @@
+Just a simple chrome extension which parses all the videos from the website.

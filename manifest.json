@@ -1,0 +1,44 @@
+{
+    "manifest_version": 2,
+    "name": "Video Extractor",
+    "version": "1.0.0",
+    "description": "Extracts videos from sites.",
+    "icons": {
+        "48": "favicon.png"
+    },
+    "permissions": [
+        "activeTab",
+        "webRequest",
+        "storage",
+        "*://*/*"
+    ],
+    "commands": {
+        "next-episode": {
+            "suggested_key": {
+                "default": "Alt+N"
+            },
+            "description": "Next Episode"
+        },
+        "prev-episode": {
+            "suggested_key": {
+                "default": "Alt+P"
+            },
+            "description": "Next Episode"
+        }
+    },
+    "content_scripts": [
+        {
+            "matches": [
+                "*://*/*"
+            ],
+            "js": [
+                "index.js"
+            ]
+        }
+    ],
+    "background": {
+        "scripts": [
+            "background.js"
+        ]
+    }
+}
